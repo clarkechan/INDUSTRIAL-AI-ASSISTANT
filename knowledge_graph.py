@@ -85,7 +85,7 @@ def trace_defect(G, defect_type):
                     results.append(f"  操作员: {target} (班次: {G.nodes[target].get('shift', '未知')})")
 
                 elif rel == "recent_change":
-                    results.append(f"  ⚠️ 工站变更: {target} (日期: {G.nodes[change].get('date', '未知')})")
+                    results.append(f"  ⚠️ 工站变更: {target} (日期: {G.nodes[target].get('date', '未知')})")
 
     return "\n".join(results)
 
